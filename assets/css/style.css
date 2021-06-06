@@ -34,21 +34,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
 body {
-  height: 100%;
-}
-@font-face {
-  font-family: "Bebas Bold";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/bebasneue_bold-webfont.woff");
-}
-@font-face {
-  font-family: "Bebas Normal";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/bebasneue_regular-webfont.woff");
+  font-family: "Montserrat", sans-serif;
 }
 img {
   max-width: 100%;
@@ -66,595 +54,237 @@ ul {
 .pb-80 {
   padding-bottom: 80px;
 }
-.bg-gray {
-  background-color: #f2f2f2;
-}
-
-/*----------------------------------------*/
-/* 03. Banner CSS	
-/*----------------------------------------*/
-.banner-area {
-  background-size: cover;
-  background-position: center;
-  padding: 200px 0 160px;
-}
-.banner h1 {
-  font-size: 95px;
-  font-family: "Bebas Bold";
+.box-btn {
+  display: inline-block;
+  background-color: #f42267;
+  display: inline-block;
+  text-decoration: none;
   color: #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 7px solid #ff5990;
 }
-.banner h1 span {
-  color: #d25b38;
-}
-
-/*----------------------------------------*/
-/* 02. Header CSS	
-/*----------------------------------------*/
 .header-area {
   position: absolute;
   left: 0;
   right: 0;
-  padding: 0;
+  padding: 25px 0;
+  z-index: 3;
 }
+.banner-area {
+  padding: 250px 0 0;
+  position: relative;
+  z-index: 2;
+}
+.banner-area:before {
+  position: absolute;
+  content: "";
+  background: rgb(236, 27, 52);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(236, 27, 52, 1) 0%,
+    rgba(68, 46, 130, 1) 99%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(236, 27, 52, 1) 0%,
+    rgba(68, 46, 130, 1) 99%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(236, 27, 52, 1) 0%,
+    rgba(68, 46, 130, 1) 99%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec1b34', endColorstr='#442e82',GradientType=1 );
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
 .menu ul {
   display: flex;
   justify-content: flex-end;
-  list-style: none;
 }
 .menu ul li a {
   color: #fff;
-  display: block;
-  padding: 35px 15px;
+  text-transform: capitalize;
+  font-weight: 600;
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-.banner p {
-  color: #fff;
-}
-
-.box-btn {
-  display: inline-block;
-  background-color: #d25b38;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-  padding: 15px 25px;
-  text-decoration: none;
-}
-.border-btn {
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-  padding: 11px 25px;
-  text-decoration: none;
-  border: 3px solid #fff;
-}
-.banner a {
-  margin-right: 15px;
-  margin-top: 20px;
-}
-
-/*----------------------------------------*/
-/* 05. Services CSS	
-/*----------------------------------------*/
-.single-service {
-  background-color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 30px;
-  border: 1px solid #eee;
-}
-.single-service img {
-  width: 40px;
-}
-.single-service h4 {
-  margin: 16px 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #d25b38;
-}
-
-.section-title {
-  display: flex;
-  height: 100%;
-  align-items: flex-end;
-  margin-bottom: -15px;
-}
-.section-title h4 {
-  font-size: 90px;
-  font-family: "Bebas Bold";
-  margin-bottom: -15px;
-  color: #454443;
-  line-height: 80px;
-}
-.section-title h4 span {
-  display: block;
-  color: #d25b38;
-}
-
-/*----------------------------------------*/
-/* 08. Team CSS	
-/*----------------------------------------*/
-.single-team {
-  background-color: #fff;
-  border: 1px solid #eee;
-}
-.single-team img {
-  width: 100%;
-}
-.team-content {
-  padding: 20px;
-  text-align: center;
-}
-.team-content h4 {
-  text-transform: uppercase;
-  color: #333;
-  font-weight: 700;
-  font-family: "Bebas Bold";
-  font-size: 40px;
-}
-.team-content h4 span {
-  font-size: 25px;
-  color: #d25b38;
-  display: block;
-}
-.team-content p {
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-
-/*----------------------------------------*/
-/* 02. Price CSS	
-/*----------------------------------------*/
-.single-price {
-  text-align: center;
-  background-color: #fff;
-  padding: 40px 20px;
-}
-.single-price h4 {
-  text-transform: uppercase;
-  font-size: 40px;
-  font-family: "Bebas Bold";
-  margin: 20px 0;
-}
-.single-price h4 span {
-  display: block;
-  font-size: 25px;
-  color: #d25b38;
-  margin-top: 0;
-}
-.single-price ul {
-  margin-bottom: 30px;
-  margin: 0;
-  padding: 0;
-}
-.single-price ul li {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-.single-price ul li:last-child {
-  border-bottom: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.single-price span {
-  display: block;
-  font-size: 70px;
-  font-family: "Bebas Bold";
-  margin-top: 25px;
-}
-
-/*----------------------------------------*/
-/* 02. Contact CSS	
-/*----------------------------------------*/
-.contact-area {
-  position: relative;
-  z-index: 2;
-}
-.contact-area:after {
-  position: absolute;
-  content: "";
-  width: 65%;
-  background-image: url("../images/contact-bg.jpg");
-  right: 0;
-  top: 0;
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-position: center;
-}
-.contact-area:before {
-  position: absolute;
-  content: "";
-  width: 65%;
-  background-color: #333;
-  right: 0;
-  top: 0;
-  height: 100%;
-  z-index: 1;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.8;
-}
-.contact-form {
-  position: relative;
-  z-index: 2;
-  background-color: #fff;
-  padding: 50px 25px;
-  border-radius: 7px;
-  margin-left: 70px;
-}
-.contact-form input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  margin-bottom: 0;
-  margin-top: 5px;
-  border-radius: 0;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid #7777;
-  padding: 12px;
-  margin-bottom: 30px;
-}
-
-.section-top-title {
-  text-transform: uppercase;
-  font-size: 90px;
-  font-family: "Bebas Bold";
-  margin-bottom: 40px;
-  color: #454443;
-  line-height: 80px;
-}
-.section-top-title span {
-  display: block;
-  color: #d25b38;
-}
-.single-contact {
-  display: flex;
-  align-items: center;
-  margin-bottom: 22px;
-}
-.single-contact img {
-  width: 30px;
-  margin-right: 16px;
-}
-.single-contact:last-child {
-  margin-bottom: 0;
-}
-.single-contact h4 {
-  text-transform: uppercase;
-  font-family: "Bebas Bold";
-  font-size: 26px;
-  color: #d25b38;
-}
-.single-contact h4 span {
-  display: block;
-  color: #333;
-  font-size: 20px;
-  text-transform: ;
-}
-
-/*----------------------------------------*/
-/* 02. Footer CSS	
-/*----------------------------------------*/
-.footer {
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 30px 0;
-}
-.footer p {
-  margin-bottom: 0;
-}
-
-/*----------------------------------------*/
-/* 02. About CSS	
-/*----------------------------------------*/
-.about-middle-back {
-  background-image: url("../images/about/about-middle.png");
-  background-size: cover;
-  background-position: top center;
-  padding: 80px 40px;
-}
-.single-about-middle {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #f2f2f2;
-}
-
-.single-about-middle-content {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: right;
-  font-family: "Bebas Bold";
-}
-.single-about-middle-content h4 {
-  font-size: 30px;
-  margin-bottom: 0;
-}
-.single-about-middle-content p {
-  font-size: 22px;
-}
-.single-about-middle img {
-  position: absolute;
-  right: -70px;
-  background-color: #fff;
-  padding: 5px;
-  border-radius: 50%;
-  border: 5px solid #d25b38;
-  top: 12px;
-}
-.single-about-middle:last-child {
-  border-bottom: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.single-about-right {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-}
-.single-about-right img {
-  position: absolute;
-  left: -55px;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 50%;
-  border: 5px solid #d25b38;
-  top: 0px;
-}
-.about-right {
-  margin-top: 80px;
-}
-.about-left {
-  padding: 40px 0;
-}
-.single-about-right p {
-  margin-left: 20px;
-  margin-top: ;
+  padding: 10px 15px;
   font-size: 18px;
-  line-height: 25px;
 }
 
-/*----------------------------------------*/
-/* 02. Blog CSS	
-/*----------------------------------------*/
-.single-blog {
-  background-size: cover;
-  background-position: 0 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.banner-content h5 {
+  color: #fff;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 400;
 }
-.h-100 {
-  height: 100%;
+.banner-content h2 {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
 }
-
-.blog-cat a {
-  background-color: #d25b38;
+.banner-content p {
+  color: #fff;
+  margin: 20px 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.banner-content a {
+  background-color: #f42267;
   display: inline-block;
+  color: #fff;
   text-decoration: none;
-  color: #fff;
-  padding: 5px 20px;
-  text-transform: uppercase;
-  border-radius: 3px;
-}
-.blog-content {
-  color: #fff;
-  margin-top: 40px;
-}
-.single-blog {
-  position: relative;
-  z-index: 2;
-}
-.single-blog:before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: #333;
-  z-index: -1;
-  opacity: 0.75;
-}
-.blog-content h4 {
-  text-transform: uppercase;
-  font-family: "Bebas Bold";
-  font-size: 36px;
-}
-.meta a {
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
   margin-right: 12px;
-  font-size: 14px;
 }
-.blog-content p {
-  margin-bottom: 0;
-  margin-top: 30px;
-}
-.meta a:after {
-  position: absolute;
-  content: "";
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  top: 7px;
-  left: -10px;
-}
-.meta {
-  margin-left: 12px;
-}
-.blog-area .col-md-6:nth-child(3),
-.blog-area .col-md-6:nth-child(4) {
-  margin-top: 20px;
+.banner-content a:last-child {
+  background-color: #783491;
 }
 
-/*----------------------------------------*/
-/* 02. CTA CSS	
-/*----------------------------------------*/
+.features-area {
+  background-color: #4b2d7f;
+}
+.single-feature {
+  text-align: center;
+  color: #fff;
+  padding: 60px 30px;
+}
+.single-feature img {
+  width: 50px;
+}
+.single-feature h4 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 25px 0;
+}
+.single-feature h4 span {
+  display: block;
+  font-weight: 700;
+  font-size: 50px;
+}
+.single-feature p {
+  font-size: 16px;
+}
+
 .cta-area {
-  position: relative;
   background-size: cover;
   background-position: center;
+  padding: 60px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
   z-index: 2;
-  padding: 40px 0;
 }
 .cta-area:before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
+  background-color: #4b4784;
   left: 0;
   top: 0;
-  background-color: #333;
-  opacity: 0.75;
+  opacity: 0.85;
   z-index: -1;
 }
-.cta-area img {
-  margin-top: -100px;
-  margin-bottom: -80px;
-}
-.team-area {
-  padding-bottom: 80px;
-}
-.price-area {
-  padding-top: 150px;
-}
-.blog-area {
-  padding-bottom: 160px;
+.cta-area h5 {
+  font-size: 30px;
+  font-weight: 600;
 }
 .cta-area h4 {
-  text-transform: uppercase;
-  color: #fff;
-  font-family: "Bebas Bold";
-  font-size: 70px;
-  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: capitalize;
 }
 .cta-area p {
-  color: #fff;
-  font-size: 16px;
-  margin-top: 0;
-}
-
-/*----------------------------------------*/
-/* 02. Portfolio CSS	
-/*----------------------------------------*/
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-}
-.single-portfolio {
-  flex-basis: 322px;
-  min-height: 300px;
-  position: relative;
-  z-index: 2;
-  color: #fff;
-}
-.single-portfolio:before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: #333;
-  left: ;
-  opacity: 0.75;
-  z-index: -1;
-}
-.portfolio-content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-  transition: 0.3s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.portfolio-content i {
-  font-size: 26px;
-}
-.portfolio-content h4 {
-  font-family: "Bebas BOld";
-  font-size: 36px;
-  margin-top: 10px;
-}
-.portfolio-content h4 span {
-  display: block;
   font-size: 18px;
+  font-weight: 400;
+  margin: 20px 0;
 }
-.single-portfolio:hover .portfolio-content {
-  opacity: 1;
-  visibility: visible;
-}
-.portfolio-area .section-title {
-  padding-bottom: 80px;
+.cta-area a {
+  margin-top: 15px;
 }
 
-/*----------------------------------------*/
-/* 02. Counter CSS	
-/*----------------------------------------*/
-.counter-area {
-  position: relative;
-  z-index: 2;
+.footer-area {
+  padding: 60px 0;
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 2;
 }
-.counter-area:before {
+.footer-area:before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
+  background-color: #333;
   left: 0;
   top: 0;
-  background-color: #333;
-  opacity: 0.75;
+  opacity: 0.8;
   z-index: -1;
 }
-.counter-area .section-title h4 {
+.single-footer h4 {
+  text-transform: capitalize;
   color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.single-footer ul {
+  margin: 0;
+  padding: 0;
+}
+.single-footer ul li {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.single-footer ul li a {
+  color: #fff;
+  text-decoration: navajowhite;
+  font-size: 18px;
+  font-weight: 500;
+}
+.single-footer {
+  margin-bottom: 50px;
+}
+.footer-gallery img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 35px;
 }
 
-.single-counter {
-  background-color: #fff;
-  padding: 26px;
-  margin-bottom: 36px;
-  border-radius: 3px;
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+.footer-bottom ul {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
-.single-counter i {
-  font-size: 24px;
-  background-color: tomato;
-  padding: 20px;
-  border-radius: 50%;
-  color: #fff;
-}
-.single-counter h4 {
-  font-family: "Bebas BOld";
-  font-size: 20px;
-  margin-left: 14px;
-}
-.single-counter h4 span {
+.footer-bottom ul li a {
   display: block;
-  font-size: 50px;
+  margin: 0 15px;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: navajowhite;
+  font-size: 16px;
+  font-weight: 600;
 }
-.counter-area .section-title {
-  margin-top: -40px;
+.footer-bottom p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 0;
 }
